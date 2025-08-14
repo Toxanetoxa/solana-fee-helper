@@ -1,0 +1,15 @@
+{
+  "name": "solana-fee-helper",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev:be": "pnpm -C packages/backend dev",
+    "build:be": "pnpm -C packages/backend build",
+    "test:be": "pnpm -C packages/backend test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4"
+}
