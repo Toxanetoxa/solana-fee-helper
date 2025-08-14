@@ -2,9 +2,8 @@
   "name": "extension",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +11,7 @@
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.1.0",
+    "@types/chrome": "^0.1.4",
     "typescript": "^5.9.2",
     "vite": "^7.1.2"
   }

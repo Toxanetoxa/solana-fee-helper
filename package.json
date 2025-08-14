@@ -6,7 +6,8 @@
   "scripts": {
     "dev:be": "pnpm -C packages/backend dev",
     "build:be": "pnpm -C packages/backend build",
-    "test:be": "pnpm -C packages/backend test"
+    "test:be": "pnpm -C packages/backend test",
+    "build:ext": "pnpm --dir packages/extension run build"
   },
   "keywords": [],
   "author": "",

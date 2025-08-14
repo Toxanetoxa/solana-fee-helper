@@ -1,11 +1,18 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-import { registerRecoFee } from './api/recoFee.js';
+import plugin from './api/recoFee.js';
 
 const app = Fastify({ logger: true });
-await app.register(cors, { origin: true });
+await app.register(cors, {
+    origin: (origin, cb) => {
+        const allowed = [ 'https://jup.ag', /\.jup\.ag$/ ];
+        if (!origin) return cb(null, true);
+        const ok = allowed.some((rule) => rule instanceof RegExp ? rule.test(origin) : rule === origin);
+        cb(ok ? null : new Error('CORS'), ok);
+    }
+});
 
-await app.register(registerRecoFee);
+await app.register(plugin);
 
 app.get('/health', async () => ({ ok: true }));
 
