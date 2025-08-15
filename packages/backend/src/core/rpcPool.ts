@@ -1,6 +1,6 @@
 import { Connection } from '@solana/web3.js';
 
-const DEFAULT_TIMEOUT_MS = 1500;
+const DEFAULT_TIMEOUT_MS = 5000;
 const HEALTH_TTL_MS = 5000;
 
 let cached: { at: number; health: RpcHealth[] } | null = null;

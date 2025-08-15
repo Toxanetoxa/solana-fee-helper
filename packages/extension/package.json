@@ -12,6 +12,7 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.1.0",
     "@types/chrome": "^0.1.4",
+    "sass-embedded": "^1.90.0",
     "typescript": "^5.9.2",
     "vite": "^7.1.2"
   }
